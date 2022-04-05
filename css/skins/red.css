@@ -1,0 +1,18 @@
+.header,.home,.testimonial::before{
+    background-color: #d70d25;
+}
+
+
+.home-btn,.about ul li svg,.features-item svg,.testimonial .testi-item  .client-info h5{
+color: #d70d25;
+}
+
+.title h6,.features-item:hover,.products .owl-carousel button.owl-next,
+.products .owl-carousel button.owl-prev{
+    background-color: #d70d25;
+    color: #fff;
+}
+
+.contact .contact-form input:focus,.contact .contact-form textarea:focus{
+border-bottom:2px solid #d70d25;
+}

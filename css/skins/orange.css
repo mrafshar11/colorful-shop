@@ -1,0 +1,18 @@
+.header,.home,.testimonial::before{
+    background-color: #BF360C;
+}
+
+
+.home-btn,.about ul li svg,.features-item svg,.testimonial .testi-item  .client-info h5{
+color: #BF360C;
+}
+
+.title h6,.features-item:hover,.products .owl-carousel button.owl-next,
+.products .owl-carousel button.owl-prev{
+    background-color: #BF360C;
+    color: #fff;
+}
+
+.contact .contact-form input:focus,.contact .contact-form textarea:focus{
+border-bottom:2px solid #BF360C;
+}

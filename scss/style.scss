@@ -1,0 +1,464 @@
+@font-face {
+    font-family: 'vazir';
+    src: url('../fonts/Vazir.eot') format('eot');
+    src: url('../fonts/Vazir.ttf') format('truetype'),
+        url('../fonts/Vazir.woff') format('woff');
+}
+
+
+body {
+    font-family: 'vazir';
+    direction: rtl;
+    text-align: right;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none !important;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+.title {
+
+
+    h6 {
+        display: inline-block;
+        padding: 5px 10px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    h2 {
+        margin: 30px 0;
+        font-weight: 600;
+    }
+}
+
+
+/*  header */
+
+.header {
+    border-bottom: 1px solid rgba(255, 255, 255, .2);
+
+    .navbar {
+        flex-direction: row-reverse;
+
+        .navbar-brand {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 22px;
+            letter-spacing: 2px;
+        }
+
+        .nav-link {
+            padding: 0 15px;
+        }
+    }
+}
+
+
+/*  home  */
+
+
+.home {
+    position: relative;
+
+
+    h1 {
+        font-size: 55px;
+        font-weight: 600;
+    }
+
+    p {
+        line-height: 30px;
+    }
+
+    .home-btn {
+        background-color: #fff;
+        padding: 10px;
+        border-radius: 10px;
+        border: 2px solid #fff;
+        transition: all .3s ease-in-out;
+        text-decoration: none;
+
+        &:hover {
+            background-color: transparent;
+            color: #fff;
+        }
+    }
+
+    .home-image {
+
+
+        img {
+            width: 60%;
+            animation: homeWatch 7s linear infinite;
+        }
+    }
+
+    .shape div {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        opacity: .1;
+
+        &:nth-child(1) {
+            top: 70%;
+            right: 0;
+            background: url("../images/star-solid.svg") no-repeat;
+            animation: shapeOne 8s linear infinite;
+        }
+
+        &:nth-child(2) {
+            top: 40%;
+            left: 10%;
+            background: url("../images/star-of-life-solid.svg") no-repeat;
+            animation: shapeTow 9s linear infinite;
+        }
+
+        &:nth-child(3) {
+            top: 10%;
+            left: 50%;
+            background-color: #fff;
+            border-radius: 50%;
+            animation: shapeThree 9s linear infinite;
+        }
+
+    }
+}
+
+@keyframes homeWatch {
+    0% {
+        transform: translateY(15px);
+    }
+
+    25% {
+        transform: translateX(15px);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+
+    75% {
+        transform: translateX(-30px);
+    }
+
+    100% {
+        transform: translateY(15px);
+    }
+}
+
+@keyframes shapeOne {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+
+}
+
+@keyframes shapeTow {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+
+}
+
+@keyframes shapeThree {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.5);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+
+}
+
+/*  about */
+
+.about {
+    padding: 120px 0;
+
+    ul li svg {
+        margin-left: 10px;
+    }
+
+    .about-img img {
+        width: 220px;
+    }
+}
+
+
+/* features */
+
+
+.features {
+    padding: 120px 0;
+    background-color: #f8f8f8;
+
+
+
+    .features-item {
+        background-color: #fff;
+        padding: 45px 15px;
+        border: 1px solid #f6f6f6;
+        box-shadow: 0 0 10px rgba(207, 207, 207, .3);
+        transform: translateY(0);
+        transition: all .4s ease-in-out;
+        margin-bottom: 30px;
+
+        svg {
+            font-size: 60px;
+            transition: all .4s ease-in-out;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 25px;
+            transition: all .4s ease-in-out;
+        }
+
+        &:hover {
+            transform: translateY(-10px);
+
+            p,
+            svg {
+                color: #fff !important;
+            }
+        }
+    }
+}
+
+
+/* products  */
+
+.products {
+    padding: 120px 0;
+
+    .product-item {
+        box-shadow: 0 0 7px rgba(195, 195, 195, .5);
+        margin-top: 50px;
+        border: 1px solid #f2f2f2;
+        padding: 20px 10px;
+
+
+        .product-img {
+            position: relative;
+
+            .overlay {
+                opacity: 0;
+                position: absolute;
+                top: 0;
+                right: 0;
+                left: 0;
+                bottom: 0;
+                background: rgba(0, 0, 0, .4);
+                transition: all .3s ease-in-out;
+
+                &:hover {
+                    opacity: 1;
+                }
+
+                a {
+                    color: #000;
+                    background-color: #fff;
+                    padding: 10px;
+                    border-radius: 25px;
+                    font-weight: 600;
+                    font-size: 20px;
+                    text-decoration: none;
+                }
+            }
+
+        }
+
+        .product-content {
+            margin-top: 15px;
+
+            .new-price {
+                color: green;
+                padding-left: 15px;
+            }
+
+            .old-price {
+                color: red;
+
+            }
+
+            .product-name {
+                margin-top: 10px;
+            }
+        }
+
+    }
+
+    .owl-nav {
+        margin-top: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .owl-carousel button.owl-next,
+    .owl-carousel button.owl-prev {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        font-size: 35px;
+        margin: 0 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+
+/*  testimonial  */
+
+
+.testimonial {
+    position: relative;
+    padding: 120px 0;
+    width: 100%;
+    height: 850px;
+    background: url('../images/testimonial.jpg') no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        opacity: .5;
+
+    }
+
+    .testi-item {
+        background-color: #fff;
+        padding: 25px;
+        padding: 25px;
+        border-radius: 10px;
+        margin-top: 100px;
+
+
+        .star svg {
+            color: gold;
+        }
+
+
+        img {
+            width: 100px;
+            height: 120px;
+        }
+
+        .client-info {
+            margin-top: 35px;
+
+            h5 {
+                margin-right: 25px;
+                margin-top: 20px;
+            }
+
+            p {
+                margin-top: 10px;
+                margin-right: 25px;
+            }
+        }
+
+    }
+}
+
+
+/*   */  
+
+
+.contact{
+    padding: 120px 0;
+
+
+    .contact-form{
+
+         input{
+            border: none;
+            border-bottom: 2px solid rgb(190, 190, 190);
+            padding: 5px;
+
+        }
+
+        textarea{
+            border: none;
+            border-bottom: 2px solid rgb(190, 190, 190);
+            padding: 5px;
+            height: 150px;
+        }
+
+
+    }
+}
+
+
+/*  */  
+
+
+
+.style-switcher{
+    width: 230px ;
+    height: 130px;
+    position: fixed;
+    top: 130px;
+    right: 0;
+    background-color: #fff;
+    transition: all .3s ease-in-out;
+    transform: translateX(100%);
+
+    &.open{
+        transform: translateX(0%);
+    }
+
+    .toggle-style-switcher{
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        left: -40px;
+        background-color: #fff;
+        cursor: pointer;
+    }
+
+    ul{
+        margin-top: 15px;
+        display: flex;
+        margin-right: 10px;
+
+
+        li{
+            width: 30px;
+            height: 30px;
+            margin-left:10px;
+            border-radius: 10px 0 10px 0;
+            cursor: pointer;
+        }
+    }
+
+
+}
